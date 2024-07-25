@@ -138,7 +138,7 @@
       <visual>
         <origin xyz="-0 0 0" rpy="0 0 0"/>
         <geometry>
-		<mesh filename="package://taubot_description/urdf/meshes/taubot_sprocket.stl" scale="0.001 0.001 0.001"/>
+		<mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_sprocket.stl" scale="0.001 0.001 0.001"/>
           <!-- <cylinder length="${wheel_len}" radius="${wheel_radius}"/> -->
         </geometry>
         <material name="grey"/>
@@ -214,7 +214,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
 	<!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-	<mesh filename="package://taubot_description/urdf/meshes/taubot_top_sides.stl" scale="0.001 0.001 0.001"/> 
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_top_sides.stl" scale="0.001 0.001 0.001"/> 
         </geometry>
         <material name="white"/>
       </visual>
@@ -225,7 +225,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
 	<!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_bottom.stl" scale="0.001 0.001 0.001"/> 
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_bottom.stl" scale="0.001 0.001 0.001"/> 
         </geometry>
         <material name="grey"/>
       </visual>
@@ -236,7 +236,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
 	<!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_wheel_idlers.stl" scale="0.001 0.001 0.001"/> 
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_wheel_idlers.stl" scale="0.001 0.001 0.001"/> 
         </geometry>
         <material name="grey"/>
       </visual>
@@ -247,7 +247,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
 	<!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_chains.stl" scale="0.001 0.001 0.001"/> 
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_chains.stl" scale="0.001 0.001 0.001"/> 
         </geometry>
         <material name="black"/>
       </visual>
@@ -258,7 +258,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
         <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_screws.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_screws.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="silver"/>
       </visual>
@@ -269,7 +269,7 @@
         <origin rpy="0 0 ${pi}" xyz="0.092 0 0"/>
         <geometry>
         <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_rplidar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_rplidar.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="dark_grey"/>
       </visual>
@@ -280,7 +280,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
         <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-		<mesh filename="package://taubot_description/urdf/meshes/taubot_cap_rings.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_cap_rings.stl" scale="0.001 0.001 0.001"/>
         </geometry>      
         <material name="silver"/>
       </visual>
@@ -291,7 +291,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
         <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_cap_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_cap_2.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="blue_trans"/>
       </visual>
@@ -302,7 +302,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
         <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_cap_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_cap_3.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="blue_trans"/>
       </visual>
@@ -313,7 +313,7 @@
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
         <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
-        <mesh filename="package://taubot_description/urdf/meshes/taubot_ultrasonic.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_ultrasonic.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="white"/>
       </visual>
