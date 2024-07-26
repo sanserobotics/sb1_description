@@ -171,6 +171,12 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
 
+    <joint name="screws_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="screws"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
     <joint name="laser_joint" type="fixed">
       <parent link="base_link"/>
       <child link="laser"/>
@@ -246,6 +252,17 @@
         <material name="black"/>
       </visual>
     </link>
+
+      <link name="screws">
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+        <!-- the stl files are in mm, but urdf is in m, therefore have to scale down 0.001 -->
+        <mesh filename="package://taubot_description/urdf/meshes/taubot_screws.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+    </link> 
 
       <link name="laser">
       <visual>
