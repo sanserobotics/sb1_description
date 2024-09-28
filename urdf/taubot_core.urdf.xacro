@@ -60,62 +60,62 @@
   </material>
 
 
-  <!-- Base Link -->
-  <link name="base_link">
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="${base_width+0.01} ${base_length+0.01} ${base_height+0.01}"/>
-      </geometry>
-    </collision>
+    <!-- Base Link -->
+    <link name="base_link">
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${base_width+0.01} ${base_length+0.01} ${base_height+0.01}"/>
+        </geometry>
+      </collision>
 
-    <visual>  <!-- visual is not necessary for baselink, this is just in case the meshes doesn't display -->
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="${base_width-0.05} ${base_length-0.15} ${base_height-0.1}"/>        
-      </geometry>
-      <material name="orange"/>
-    </visual>
-  </link>
+      <visual>  <!-- visual is not necessary for baselink, this is just in case the meshes doesn't display -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${base_width-0.05} ${base_length-0.15} ${base_height-0.1}"/>        
+        </geometry>
+        <material name="orange"/>
+      </visual>
+    </link>
 
-  <!-- base_footprint_joint -->
-  <link name="base_footprint">
-  </link>
+    <!-- base_footprint_joint -->
+    <link name="base_footprint">
+    </link>
 
-  <joint name="base_footprint_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="base_footprint"/>
-    <origin xyz="0 0 -${base_height/2}" rpy="0 0 0"/>
-  </joint>
+    <joint name="base_footprint_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="base_footprint"/>
+      <origin xyz="0 0 -${base_height/2}" rpy="0 0 0"/>
+    </joint>
 
 
-  <!-- wheel links and joints -->
-  <joint name="left_wheel_joint" type="continuous">
-    <parent link="base_link"/>
-    <child link="left_wheel"/>
-    <origin xyz="-0.126 -${(base_length-wheel_len)/2.0+0.002} ${z_offset}" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <dynamics damping="0.2"/>
-  </joint>
+    <!-- wheel links and joints -->
+    <joint name="left_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="left_wheel"/>
+      <origin xyz="-0.126 -${(base_length-wheel_len)/2.0+0.002} ${z_offset}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <dynamics damping="0.2"/>
+    </joint>
 
-  <!-- left wheel Link -->
-  <link name="left_wheel">
-    <collision>
-      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
-      <geometry>
-        <cylinder length="${wheel_len}" radius="${wheel_radius}"/>
-      </geometry>
-    </collision>
+    <!-- left wheel Link -->
+    <link name="left_wheel">
+      <collision>
+        <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+        <geometry>
+          <cylinder length="${wheel_len}" radius="${wheel_radius}"/>
+        </geometry>
+      </collision>
 
-    <visual>
-     <origin xyz="-0 0 0" rpy="0 0 0"/>
-      <geometry>
-	      <mesh filename="file:///home/tjpink/Documents/taubot_ws/src/taubot_description/urdf/meshes/taubot_sprocket.stl" scale="0.001 0.001 0.001"/>
-        <!-- <cylinder length="${wheel_len}" radius="${wheel_radius}"/> -->
-      </geometry>
-      <material name="grey"/>
-    </visual>
-  </link> 
+      <visual>
+        <origin xyz="-0 0 0" rpy="0 0 0"/>
+        <geometry>
+	       <mesh filename="package://taubot_description/urdf/meshes/taubot_sprocket.stl" scale="0.001 0.001 0.001"/>
+          <!-- <cylinder length="${wheel_len}" radius="${wheel_radius}"/> -->
+        </geometry>
+        <material name="grey"/>
+      </visual>
+    </link> 
 
     <joint name="right_wheel_joint" type="continuous">
       <parent link="base_link"/>
